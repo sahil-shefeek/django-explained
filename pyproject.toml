@@ -4,5 +4,8 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.9"
 dependencies = [
+    "crispy-bootstrap5>=2025.6",
     "django>=4.2.23",
+    "django-bootstrap-v5>=1.0.11",
+    "django-crispy-forms>=2.4",
 ]
