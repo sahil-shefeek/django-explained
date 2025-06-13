@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {% extends 'base.html' %} {% block title %}{{ product.name }}{% endblock %} {%
+  block content %}
+  <h1>{{ product.name }}</h1>
+  <p><strong>Description:</strong> {{ product.description|default:"N/A" }}</p>
+  <p><strong>Price:</strong> ${{ product.price }}</p>
+  <p><strong>Stock:</strong> {{ product.stock }}</p>
+  <p><strong>Created At:</strong> {{ product.created_at }}</p>
+  <p><strong>Updated At:</strong> {{ product.updated_at }}</p>
+  <a href="{% url 'sample:product_list' %}" class="btn btn-secondary"
+    >Back to List</a
+  >
+  <a href="{% url 'sample:product_edit' product.pk %}" class="btn btn-warning"
+    >Edit</a
+  >
+  <a href="{% url 'sample:product_delete' product.pk %}" class="btn btn-danger"
+    >Delete</a
+  >
+  {% endblock %}
+</html>

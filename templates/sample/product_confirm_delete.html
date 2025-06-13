@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Confirm Delete</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title %}Confirm Delete{% endblock %} {%
+    block content %}
+    <div class="container">
+      <h1>Delete Product</h1>
+      <p>Are you sure you want to delete "{{ product.name }}"?</p>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        <a href="{% url 'sample:product_list' %}" class="btn btn-secondary"
+          >Cancel</a
+        >
+      </form>
+    </div>
+    {% endblock %}
+  </body>
+</html>
