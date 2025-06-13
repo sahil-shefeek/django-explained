@@ -3,4 +3,6 @@ name = "django-explained"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = [
+    "django>=4.2.23",
+]
